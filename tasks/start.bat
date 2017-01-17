@@ -1,0 +1,4 @@
+cd ..
+
+
+call npm start
