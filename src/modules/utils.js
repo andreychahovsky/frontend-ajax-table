@@ -20,13 +20,6 @@ function compareName (userA, userB) {
 }
 
 module.exports = {
-	getUsers: function (url, callback) {
-		$.ajax({
-		url: url,
-		success: callback
-		});
-	},
-
 	showAllUsers: function (usersData) {
 		add.header(allusersElem,'1. Список всех пользователей.');
 		usersData.forEach(function(user){
@@ -37,7 +30,7 @@ module.exports = {
 	showActiveUsers: function (usersData) {
 		add.header(allusersElem,'2. Список активных пользователей.');
 		usersData.forEach(function (user) {
-			if (user.isActive === true) {
+			if (user.isActive) {
 				add.content(allusersElem, user);
 			}
 		});
